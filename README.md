@@ -10,3 +10,17 @@ The website features an intuitive interface with clear navigation, allowing user
 🎨 SCSS<br>
 🚀 JavaScript<br>
 🔄 Gulp
+
+### 🏗️ Installation & Setup
+
+#### Development Mode
+To start the development mode, use the following command:
+```sh
+gulp
+```
+
+#### Production Mode
+To build the project for production, use the following command:
+```sh
+gulp build
+```
