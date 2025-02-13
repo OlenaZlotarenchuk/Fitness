@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alegreya:ital,wght@0,400..900;1,400..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+@function toRem($valueSize) {
+    $remValue: ($valueSize / 22) + rem; 
+    @return $remValue;
+}
+
+$font-primary: "Alegreya";
+$font-josefin: "Josefin Sans";
+$font-abril: "Abril Fatface";
+
+$font-size-base: 22px;
+$font-size-h1: toRem(26);
+$font-size-h2: toRem(26);
+$font-size-h3: toRem(44);
+$font-size-h4: toRem(24);
+
+
+$background-color: #FFFAFB;
+
+$color-primary:#504747;
+$color-red: #FF2625;
+$color-black: #3A1212;
+
+.h1 {
+    font-family: $font-josefin;
+    font-size: $font-size-h1;
+    font-weight: 600;
+    line-height: toRem(42);
+    color: $color-red;
+}
+
+.h2 {
+    font-family: $font-josefin;
+    font-size: $font-size-h2;
+    font-weight: 600;
+    line-height: toRem(42);
+    color: $color-red;
+    text-transform: capitalize;
+}
+
+.h3 {
+    font-family: $font-josefin;
+    font-size: $font-size-h3;
+    font-weight: $font-weight-bold;
+    line-height: toRem(58);
+    color: $color-black;
+    text-transform: capitalize;
+    @media (max-width:630px) {
+        font-size: toRem(38); 
+    }
+
+    @media (max-width:546px) {
+        font-size: toRem(31); 
+    }
+}
+
+.h4 {
+    font-family: $font-primary;
+    font-size: $font-size-h4;
+    line-height: toRem(29);
+    color: $color-black;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 0;
+}
+
+
+// buttons
+
+.button {
+    border: 1px solid $color-red;
+    border-radius: 29px;
+	background-color: $color-red;
+	color: $white;
+	text-transform: capitalize;
+	padding: 12px 58px;
+    display: inline-block;
+	transition: all 0.3s;
+    text-align: center;
+
+    @media (max-width:1200px) {
+        padding: 8px 48px;
+    }
+
+    @media (max-width:425px) {
+        width: 80%;
+        text-align: center;
+    }
+
+    @media (max-width:375px) {
+        width: 100%;
+        
+    }
+}
+
+@media (any-hover: hover) {
+	.button:hover {
+		background-color: rgba(255, 155, 154, 0.25);
+        border: 1px solid $color-red;
+        color: $color-red;
+        
+	}
+}
